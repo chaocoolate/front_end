@@ -29,29 +29,30 @@
 
     // load all of the dependencies asynchronously.
     $script([
+      'lib/jquery-1.7.2.min.js',
+      'lib/jquery.transform.js',
       'lib/angular/angular.js',
       'js/app.js',
       'js/services.js',
       'js/controllers.js',
       'js/filters.js',
-      'js/directives.js'
+      'js/directives.js',
+      'js/animation.js'
     ], function() {
       // when all is done, execute bootstrap angular application
-      angular.bootstrap(document, ['myApp']);
+      angular.bootstrap(document, ['chaocoolate']);
     });
   </script>
-  <title>My AngularJS App</title>
-  <link rel="stylesheet" href="css/app.css">
+  <title>潮我刊</title>
+  <link href="css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <link href="css/print.css" media="print" rel="stylesheet" type="text/css" />
+  <!--[if IE]>
+      <link href="css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <![endif]-->
 </head>
 <body>
-  <ul class="menu">
-    <li><a href="#/view1">view1</a></li>
-    <li><a href="#/view2">view2</a></li>
-  </ul>
 
   <div ng-view></div>
-
-  <div>Angular seed app: v<span app-version></span></div>
 
 </body>
 </html>

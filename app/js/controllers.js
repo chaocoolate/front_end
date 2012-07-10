@@ -3,10 +3,16 @@
 /* Controllers */
 
 
-function MyCtrl1() {}
-MyCtrl1.$inject = [];
-
-
-function MyCtrl2() {
+function HomeCtrl($scope, $location) {
+	$scope.$watch($location, function() {
+		console.log(1);
+	});
 }
-MyCtrl2.$inject = [];
+HomeCtrl.$inject = ['$scope', '$location'];
+
+function ExploreCtrl($scope, $location) {
+	$scope.$watch($location, function() {
+		console.log(2);
+	});
+}
+ExploreCtrl.$inject = ['$scope', '$location'];
